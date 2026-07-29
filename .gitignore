@@ -1,0 +1,26 @@
+# dependencias
+node_modules/
+
+# salida de build
+dist/
+.astro/
+.output/
+.vercel/
+.netlify/
+
+# variables de entorno
+.env
+.env.*
+!.env.example
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# sistema / editor
+.DS_Store
+.vscode/
+.idea/
+*.log
