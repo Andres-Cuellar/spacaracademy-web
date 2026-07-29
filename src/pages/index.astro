@@ -1,0 +1,327 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Marquee from '../components/Marquee.astro';
+---
+
+<BaseLayout
+  title="SpaCar Academy · Convierte tu detailing en una empresa que funciona sin ti"
+  description="Dos motores: clientes en automático y un equipo que ejecuta sin ti. Implementado contigo en 90 días."
+  active="inicio"
+>
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="text-light relative jarallax hero-90">
+      <img src="/images/bg-hero-index.webp" class="jarallax-img" alt="" />
+      <div class="hero-overlay-15"></div>
+      <div class="container relative z-2">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-7">
+            <div class="spacer-single"></div>
+            <span class="vsl-eyebrow wow fadeInUp">Para detailers que ya facturan</span>
+            <h1 class="mt-3 mb-3 wow fadeInUp" data-wow-delay=".1s">
+              Convierte tu detailing en una <span class="id-color">empresa que funciona sin ti</span>
+            </h1>
+            <p class="lead mb-4 wow fadeInUp" data-wow-delay=".2s">
+              Instalamos dos motores en tu negocio: uno que te trae clientes en automático y otro que
+              hace que el trabajo se ejecute sin que tú metas las manos. Escala a $25K–$30K al mes,
+              implementado contigo en 90 días.
+            </p>
+            <div class="d-flex flex-wrap align-items-center gap-3 wow fadeInUp" data-wow-delay=".3s">
+              <a class="btn-main fx-slide" href="/registro.html"><span>Agenda tu llamada gratuita</span></a>
+              <a class="de-flex align-items-center text-white" href="#metodo">
+                <div class="btn-play sm circle"><span></span></div>
+                <div class="ms-3 fw-bold">Conoce el método</div>
+              </a>
+            </div>
+            <div class="spacer-single"></div>
+            <div class="vsl-trust start wow fadeInUp" data-wow-delay=".4s">
+              <span><i class="fa-solid fa-check"></i>Llamada 100% gratuita</span>
+              <span><i class="fa-solid fa-check"></i>Sin tarjeta de crédito</span>
+              <span><i class="fa-solid fa-check"></i>+90,000 seguidores en Instagram</span>
+            </div>
+            <div class="spacer-double"></div>
+          </div>
+        </div>
+      </div>
+      <div class="gradient-edge-bottom"></div>
+    </section>
+
+    <Marquee />
+
+    <!-- ============ QUÉ ES SPACAR ============ -->
+    <section>
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6 wow fadeInRight qe-media">
+            <div class="row g-4">
+              <div class="col-6">
+                <div class="relative rounded-1 overflow-hidden">
+                  <img src="/images/que-es-1.jpg" alt="Detailing premium" />
+                  <div class="de-overlay-gradient-color h-50 top-50"></div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="relative rounded-1 overflow-hidden">
+                  <img src="/images/que-es-2.png" alt="Equipo de detailing" />
+                  <div class="de-overlay-gradient-color h-50 top-50"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="ms-lg-4">
+              <div class="subtitle id-color mb-3 wow fadeInUp">Qué es SpaCar Academy</div>
+              <h2 class="wow fadeInUp" data-wow-delay=".1s">No te enseñamos a lavar mejor. Te sacamos del lavado.</h2>
+              <p class="wow fadeInUp" data-wow-delay=".2s">
+                SpaCar Academy es el programa de implementación para detailers que ya facturan y están
+                atrapados en su propia operación. No es un curso más de técnicas: es un sistema llave en
+                mano que instalamos <strong>contigo</strong>, paso a paso, hasta que tu negocio funcione
+                sin depender de tus manos.
+              </p>
+              <p class="wow fadeInUp" data-wow-delay=".3s">
+                Lo dirige Giovany, que construyó un detailing que factura $20K–$25K al mes sin lavar un
+                solo carro. El mismo sistema que aplica en el suyo es el que instalamos en el tuyo.
+              </p>
+              <a class="btn-main fx-slide wow fadeInUp" data-wow-delay=".4s" href="/nosotros.html"><span>Conoce la historia</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="spacer-double"></div>
+
+        <div class="row g-4 text-center">
+          <div class="col-md-3 col-sm-6">
+            <div class="de_count wow fadeInUp">
+              <h3 class="fs-48 mb-1"><span class="id-color">$</span><span class="timer" data-to="30" data-speed="2500">0</span><span class="id-color">K</span></h3>
+              <div class="fs-15">Meta mensual del sistema</div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="de_count wow fadeInUp" data-wow-delay=".15s">
+              <h3 class="fs-48 mb-1"><span class="timer" data-to="2" data-speed="2500">0</span></h3>
+              <div class="fs-15">Motores: clientes + operación</div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="de_count wow fadeInUp" data-wow-delay=".3s">
+              <h3 class="fs-48 mb-1"><span class="timer" data-to="90" data-speed="2500">0</span></h3>
+              <div class="fs-15">Días de implementación</div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="de_count wow fadeInUp" data-wow-delay=".45s">
+              <h3 class="fs-48 mb-1"><span class="timer" data-to="90" data-speed="2500">0</span><span class="id-color">K+</span></h3>
+              <div class="fs-15">Seguidores en Instagram</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LOS 2 MOTORES ============ -->
+    <section class="no-top">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-4">
+          <div class="col-lg-8">
+            <div class="subtitle id-color mb-3 wow fadeInUp">El sistema de 2 motores</div>
+            <h2 class="wow fadeInUp" data-wow-delay=".1s">Dos motores trabajando por ti al mismo tiempo</h2>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-6 wow fadeInUp">
+            <div class="vsl-card">
+              <div class="vsl-card-img">
+                <span class="vsl-card-num">1</span>
+                <img src="/images/motor-1.webp" alt="Motor de clientes en automático" />
+              </div>
+              <div class="vsl-card-body">
+                <h4 class="mb-2">Motor 1: clientes calificados en automático</h4>
+                <p>Deja de depender de referidos y del boca a boca. Un sistema de anuncios + CRM que
+                  llena tu agenda solo, con clientes que valoran la calidad y no pelean el precio.</p>
+                <ul class="vsl-checks">
+                  <li>Flujo de clientes predecible cada mes</li>
+                  <li>Anuncios que atraen al cliente correcto</li>
+                  <li>CRM que hace el seguimiento por ti</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay=".15s">
+            <div class="vsl-card">
+              <div class="vsl-card-img">
+                <span class="vsl-card-num">2</span>
+                <img src="/images/motor-2.png" alt="Equipo que ejecuta sin ti" />
+              </div>
+              <div class="vsl-card-body">
+                <h4 class="mb-2">Motor 2: un equipo que ejecuta sin ti</h4>
+                <p>Sal del carro sin que baje la calidad. Te enseñamos a contratar, entrenar y delegar
+                  para que la operación funcione mientras tú operas como dueño.</p>
+                <ul class="vsl-checks">
+                  <li>Contratar sin miedo y sin contratar a ciegas</li>
+                  <li>Entrenar y delegar manteniendo el estándar</li>
+                  <li>Operar como dueño, no como el que lava</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MÉTODO 90 DÍAS ============ -->
+    <section id="metodo" class="jarallax text-light relative">
+      <img src="/images/full-detail.webp" class="jarallax-img" alt="" />
+      <div class="hero-overlay-15"></div>
+      <div class="container relative z-2">
+        <div class="row justify-content-center text-center mb-4">
+          <div class="col-lg-8">
+            <div class="subtitle id-color mb-3 wow fadeInUp">El método</div>
+            <h2 class="wow fadeInUp" data-wow-delay=".1s">Cómo lo construimos contigo en 90 días</h2>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4 wow fadeInUp">
+            <div class="vsl-for-item">
+              <span class="num">01</span>
+              <h5>Diagnóstico y estructura</h5>
+              <p class="mb-0">Analizamos tu negocio, identificamos el cuello de botella y diseñamos la
+                estructura que necesitas para escalar sin depender de tus manos.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 wow fadeInUp" data-wow-delay=".15s">
+            <div class="vsl-for-item">
+              <span class="num">02</span>
+              <h5>Instalación de los 2 motores</h5>
+              <p class="mb-0">Montamos el motor de clientes (anuncios + CRM) y el motor de operación
+                (equipo, procesos y estándares) trabajando en paralelo.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 wow fadeInUp" data-wow-delay=".3s">
+            <div class="vsl-for-item">
+              <span class="num">03</span>
+              <h5>Salir de la operación</h5>
+              <p class="mb-0">Delegas el lavado sin perder calidad y pasas a operar como dueño, con un
+                negocio que crece hacia los $25K–$30K al mes.</p>
+            </div>
+          </div>
+        </div>
+        <div class="spacer-single"></div>
+        <div class="text-center">
+          <a class="btn-main fx-slide wow fadeInUp" href="/registro.html"><span>Quiero que lo instalen conmigo →</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PARA QUIÉN ES ============ -->
+    <section>
+      <div class="container">
+        <div class="row justify-content-center text-center mb-4">
+          <div class="col-lg-9">
+            <div class="subtitle id-color mb-3 wow fadeInUp">Para quién es</div>
+            <h2 class="wow fadeInUp" data-wow-delay=".1s">Esto es para ti si ya facturas con tu detailing y:</h2>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6 wow fadeInUp">
+            <div class="vsl-for-item"><span class="ico"><i class="fa-solid fa-car"></i></span>
+              <h5>Sigues metido en cada carro</h5>
+              <p class="mb-0">El negocio depende 100% de tus manos.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".1s">
+            <div class="vsl-for-item"><span class="ico"><i class="fa-solid fa-arrow-trend-up"></i></span>
+              <h5>Llegaste a un techo</h5>
+              <p class="mb-0">Y trabajar más horas ya no lo rompe.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+            <div class="vsl-for-item"><span class="ico"><i class="fa-solid fa-calendar-days"></i></span>
+              <h5>Tu agenda es impredecible</h5>
+              <p class="mb-0">Quieres un flujo de clientes constante.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+            <div class="vsl-for-item"><span class="ico"><i class="fa-solid fa-crown"></i></span>
+              <h5>Quieres operar como dueño</h5>
+              <p class="mb-0">Escalar a $25K–$30K, no lavar carros.</p>
+            </div>
+          </div>
+        </div>
+        <div class="spacer-single"></div>
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <div class="vsl-note text-center wow fadeInUp">
+              <strong>Importante:</strong> esto NO es para quien está empezando desde cero. Es para
+              detailers que ya facturan y quieren escalar con sistema y equipo.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIOS ============ -->
+    <!-- TODO: reemplazar por testimonios REALES (nombre, foto y frase con permiso del cliente). -->
+    <section class="no-top">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-4">
+          <div class="col-lg-8">
+            <div class="subtitle id-color mb-3 wow fadeInUp">Lo que dicen los detailers</div>
+            <h2 class="wow fadeInUp" data-wow-delay=".1s">Historias de dueños que salieron de la operación</h2>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4 wow fadeInUp">
+            <div class="vsl-quote">
+              <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <p>«[Testimonio real del cliente aquí]. Dejé de vivir dentro del negocio y ahora opero como dueño.»</p>
+              <div class="who">
+                <img src="/images/testimonial/1.webp" alt="" />
+                <div><div class="name">Nombre del cliente</div><div class="role">Detailer · Ciudad</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 wow fadeInUp" data-wow-delay=".15s">
+            <div class="vsl-quote">
+              <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <p>«[Testimonio real del cliente aquí]. El motor de clientes me cambió la forma de vender.»</p>
+              <div class="who">
+                <img src="/images/testimonial/2.webp" alt="" />
+                <div><div class="name">Nombre del cliente</div><div class="role">Detailer · Ciudad</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 wow fadeInUp" data-wow-delay=".3s">
+            <div class="vsl-quote">
+              <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <p>«[Testimonio real del cliente aquí]. Armé mi equipo y ya no toco un solo carro.»</p>
+              <div class="who">
+                <img src="/images/testimonial/3.webp" alt="" />
+                <div><div class="name">Nombre del cliente</div><div class="role">Detailer · Ciudad</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA FINAL ============ -->
+    <section class="jarallax text-light relative">
+      <img src="/images/reserva-tu-lugar.webp" class="jarallax-img" alt="" />
+      <div class="hero-overlay-15"></div>
+      <div class="container relative z-2">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-9">
+            <div class="subtitle id-color mb-3 wow fadeInUp">Reserva tu lugar</div>
+            <h2 class="wow fadeInUp" data-wow-delay=".1s">Deja de ser el que lava carros. Conviértete en el dueño.</h2>
+            <p class="lead wow fadeInUp" data-wow-delay=".2s">
+              Solo trabajamos con 5 negocios al mes, porque implementamos contigo. La llamada es 100% gratuita.
+            </p>
+            <a class="btn-main fx-slide wow fadeInUp" data-wow-delay=".3s" href="/registro.html"><span>Agenda tu llamada gratuita →</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</BaseLayout>

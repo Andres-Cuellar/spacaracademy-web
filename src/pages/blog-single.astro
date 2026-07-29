@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const related = [
+  { img: '/images/det-2.jpg', cat: 'Clientes', title: 'El motor de clientes: cómo dejar de depender del boca a boca', delay: '' },
+  { img: '/images/det-3.jpg', cat: 'Equipo', title: 'Cómo contratar tu primer detailer sin miedo a perder calidad', delay: '.15s' },
+  { img: '/images/det-4.jpg', cat: 'Precios', title: 'Deja de competir por precio: cómo vender detailing premium', delay: '.3s' },
+];
+---
+
+<BaseLayout
+  title="Por qué facturas bien pero sigues atrapado · SpaCar Academy"
+  description="El problema del detailer que ya factura no es de clientes, es de estructura."
+  active="blog"
+>
+  <main>
+
+    <!-- ============ ARTICLE HERO ============ -->
+    <section class="text-light relative jarallax">
+      <img src="/images/det-1.jpg" class="jarallax-img" alt="" />
+      <div class="de-overlay-color op-8"></div>
+      <div class="container relative z-2">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-8">
+            <div class="spacer-single"></div>
+            <div class="bg-color rounded-1 p-0 px-2 d-inline-block mb-3">Estructura</div>
+            <h1 class="mb-2 wow fadeInUp">Por qué facturas bien pero sigues atrapado en tu propio negocio</h1>
+            <p class="vsl-kicker wow fadeInUp" data-wow-delay=".1s">Por Giovany · 12 Jul 2026 · 5 min de lectura</p>
+            <div class="spacer-single"></div>
+          </div>
+        </div>
+      </div>
+      <div class="gradient-edge-bottom"></div>
+    </section>
+
+    <!-- ============ ARTICLE BODY ============ -->
+    <section>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 legal-body">
+            <p class="lead">
+              La mayoría de los detailers que llegan a mí creen que su problema es conseguir más clientes.
+              No lo es. Su problema es que <strong>el negocio no funciona sin ellos</strong>.
+            </p>
+            <p>
+              Facturas bien. El teléfono suena. Los clientes vuelven. Y aun así, si tú paras una semana,
+              el negocio para contigo. Eso no es una empresa: es un empleo bien pagado del que no puedes salir.
+            </p>
+            <h3>El techo no se rompe con más horas</h3>
+            <p>
+              Cuando quieres crecer, tu primer instinto es trabajar más. Más carros, más días, más horas.
+              Funciona… hasta que se acaban las horas. Ahí topas con el techo real: tu capacidad física.
+              Y ninguna cantidad de esfuerzo lo rompe, porque el problema no es cuánto trabajas.
+            </p>
+            <blockquote class="vsl-note my-4">
+              El techo se rompe cuando el negocio deja de depender de tus manos. No antes.
+            </blockquote>
+            <h3>Es un problema de estructura, no de clientes</h3>
+            <p>
+              Un negocio que escala tiene dos motores funcionando en paralelo: uno que trae clientes de
+              forma predecible y otro que ejecuta el trabajo sin que el dueño meta las manos. Cuando
+              faltan esos motores, el dueño <em>es</em> los dos motores. Y por eso nunca puede soltar.
+            </p>
+            <h3>Qué hacer en su lugar</h3>
+            <p>
+              El camino no es lavar mejor: es construir estructura. Instalar un motor de clientes
+              (anuncios + CRM) para dejar de depender del boca a boca, y un motor de operación (equipo,
+              procesos y estándares) para salir del carro sin perder calidad. Con eso, pasas de técnico
+              a dueño, y el negocio empieza a crecer sin ti dentro.
+            </p>
+            <div class="spacer-single"></div>
+            <div class="vsl-note text-center">
+              <h4 class="mb-2">¿Quieres instalar los dos motores en tu detailing?</h4>
+              <p class="mb-3">Agenda una llamada gratuita y te muestro cómo se vería en tu negocio.</p>
+              <a class="btn-main fx-slide" href="/registro.html"><span>Agenda tu llamada gratuita →</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MÁS ARTÍCULOS ============ -->
+    <section class="no-top">
+      <div class="container">
+        <div class="row mb-3"><div class="col-md-12"><h3>Sigue leyendo</h3></div></div>
+        <div class="row g-4">
+          {related.map((post) => (
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay={post.delay}>
+              <a href="/blog-single.html" class="d-block hover relative rounded-1 overflow-hidden text-light">
+                <img src={post.img} class="w-100 hover-scale-1-1" alt="" />
+                <div class="absolute start-0 bottom-0 p-40 z-2">
+                  <div class="bg-color rounded-1 p-0 px-2 d-inline-block mb-3">{post.cat}</div>
+                  <h4>{post.title}</h4>
+                </div>
+                <div class="gradient-edge-bottom h-70"></div>
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+  </main>
+</BaseLayout>

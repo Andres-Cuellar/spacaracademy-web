@@ -1,0 +1,75 @@
+---
+import Header from '../components/Header.astro';
+import HeaderMinimal from '../components/HeaderMinimal.astro';
+import Footer from '../components/Footer.astro';
+import FooterMinimal from '../components/FooterMinimal.astro';
+
+export interface Props {
+  title: string;
+  description?: string;
+  active?: 'inicio' | 'nosotros' | 'blog' | 'contacto' | '';
+  variant?: 'site' | 'vsl';
+  /** scripts extra (además de vendors + designesia), ej: ['/js/custom-marquee.js'] */
+  scripts?: string[];
+}
+
+const {
+  title,
+  description = 'El sistema llave en mano para escalar tu detailing a $25K–$30K al mes sin tocar un solo carro.',
+  active = '',
+  variant = 'site',
+  scripts = [],
+} = Astro.props;
+
+const isVsl = variant === 'vsl';
+const bodyClass = isVsl ? 'dark-scheme has-sticky-cta' : 'dark-scheme';
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/icon.webp" type="image/gif" sizes="16x16" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="SpaCar Academy" />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+
+    <!-- CSS del template + marca -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap" />
+    <link href="/css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="/css/coloring.css" rel="stylesheet" type="text/css" />
+    <link id="colors" href="/css/colors/scheme-01.css" rel="stylesheet" type="text/css" />
+    <link href="/css/spacar.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body class={bodyClass}>
+    {isVsl ? <HeaderMinimal /> : <Header active={active} />}
+
+    <slot />
+
+    {isVsl ? <FooterMinimal /> : <Footer />}
+
+    {isVsl && (
+      <div class="vsl-sticky-cta">
+        <a class="btn-main fx-slide" href="#agendar"><span>Quiero agendar mi llamada →</span></a>
+      </div>
+    )}
+
+    {!isVsl && (
+      <div class="float-text show-on-scroll"><span><a href="#">Volver arriba</a></span></div>
+    )}
+    <div class="scrollbar-v show-on-scroll"></div>
+    <div id="de-loader"></div>
+
+    <!-- JS del template (jQuery + plugins). is:inline = se sirven tal cual, sin bundling. -->
+    <script is:inline src="/js/vendors.js"></script>
+    <script is:inline src="/js/designesia.js"></script>
+    {scripts.map((s) => <script is:inline src={s}></script>)}
+  </body>
+</html>

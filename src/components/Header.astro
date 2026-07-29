@@ -1,0 +1,48 @@
+---
+export interface Props {
+  active?: 'inicio' | 'nosotros' | 'blog' | 'contacto' | '';
+}
+const { active = '' } = Astro.props;
+
+const nav = [
+  { id: 'inicio', label: 'Inicio', href: '/' },
+  { id: 'nosotros', label: 'Nosotros', href: '/nosotros' },
+  { id: 'blog', label: 'Blog', href: '/blog' },
+  { id: 'contacto', label: 'Contacto', href: '/contacto' },
+];
+---
+
+<header class="transparent">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="de-flex">
+          <div class="de-flex-col">
+            <div id="logo">
+              <a href="/index.html">
+                <img class="logo-main" src="/images/logo-spacar.png" alt="SpaCar Academy" />
+                <img class="logo-scroll" src="/images/logo-spacar.png" alt="SpaCar Academy" />
+                <img class="logo-mobile" src="/images/logo-spacar.png" alt="SpaCar Academy" />
+              </a>
+            </div>
+          </div>
+          <div class="de-flex-col">
+            <div class="de-flex-col header-col-mid">
+              <ul id="mainmenu">
+                {nav.map((item) => (
+                  <li>
+                    <a class={`menu-item${active === item.id ? ' active' : ''}`} href={item.href}>{item.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <div class="de-flex-col">
+            <a class="btn-main fx-slide" href="/registro.html"><span>Agenda tu llamada</span></a>
+            <div class="menu_side_area"><span id="menu-btn"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

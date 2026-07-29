@@ -1,0 +1,52 @@
+---
+/**
+ * Formulario embebido de GoHighLevel.
+ *
+ * Cómo obtener los datos: en GHL → Sites → Forms → tu formulario → "Integrate form"
+ * → "Inline". El código que te dan tiene un src tipo:
+ *   https://api.leadconnectorhq.com/widget/form/XXXXXXXXXXXX
+ * Copiá ese ID (lo que va después de /form/) y pasalo como `formId`.
+ */
+export interface Props {
+  formId: string;        // ID del formulario GHL (después de /widget/form/)
+  formName?: string;     // el "data-form-name" que te da GHL (opcional)
+  height?: string;       // alto inicial; el script luego lo autoajusta. ej: '650px'
+  title?: string;
+}
+const {
+  formId,
+  formName = 'SpaCar Form',
+  height = '650px',
+  title = 'Formulario de contacto',
+} = Astro.props;
+
+const src = `https://api.leadconnectorhq.com/widget/form/${formId}`;
+const iframeId = `inline-${formId}`;
+const configured = formId && !formId.startsWith('PEGA_');
+---
+
+{configured ? (
+  <div class="ghl-form-wrap">
+    <iframe
+      src={src}
+      id={iframeId}
+      title={title}
+      style={`width:100%;height:${height};border:none;border-radius:14px;background:transparent;`}
+      scrolling="no"
+      data-layout="{'id':'INLINE'}"
+      data-trigger-type="alwaysShow"
+      data-activation-type="alwaysActivated"
+      data-deactivation-type="neverDeactivate"
+      data-form-name={formName}
+      data-layout-iframe-id={iframeId}
+      data-form-id={formId}
+    ></iframe>
+  </div>
+  <script is:inline src="https://link.msgsndr.com/js/form_embed.js"></script>
+) : (
+  <div class="vsl-note text-center">
+    <strong>Formulario de GoHighLevel pendiente.</strong><br />
+    Pegá el <code>formId</code> de tu formulario GHL en el componente <code>&lt;GhlForm /&gt;</code>
+    (está en <code>Sites → Forms → Integrate → Inline</code>).
+  </div>
+)}

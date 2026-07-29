@@ -1,0 +1,23 @@
+---
+// Marquee 100% CSS (sin jQuery). La pista lleva DOS copias idénticas
+// y se desplaza -50% => loop perfecto y sin barra vacía al recargar.
+const phrases = [
+  'Sistema de 2 motores',
+  'Sin tocar un solo carro',
+  'Clientes en automático',
+  'Escala a $25K–$30K al mes',
+  'Implementado contigo en 90 días',
+  'Para detailers que ya facturan',
+  'SpaCar Academy',
+];
+---
+<div class="vsl-marquee" aria-label={phrases.join(' · ')}>
+  <div class="vsl-marquee-track">
+    <span class="marquee-item">
+      {phrases.map((p) => (<span class="mq">{p}<span class="dot">◆</span></span>))}
+    </span>
+    <span class="marquee-item" aria-hidden="true">
+      {phrases.map((p) => (<span class="mq">{p}<span class="dot">◆</span></span>))}
+    </span>
+  </div>
+</div>
