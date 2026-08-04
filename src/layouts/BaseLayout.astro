@@ -11,6 +11,8 @@ export interface Props {
   variant?: 'site' | 'vsl';
   /** scripts extra (además de vendors + designesia), ej: ['/js/custom-marquee.js'] */
   scripts?: string[];
+  /** idioma del documento html */
+  lang?: 'es' | 'en';
 }
 
 const {
@@ -19,6 +21,7 @@ const {
   active = '',
   variant = 'site',
   scripts = [],
+  lang = 'es',
 } = Astro.props;
 
 const isVsl = variant === 'vsl';
@@ -26,7 +29,7 @@ const bodyClass = isVsl ? 'dark-scheme has-sticky-cta' : 'dark-scheme';
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
